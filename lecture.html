@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> COURS PARTICULIERS DE LECTURE</title>
+    <style>
+        /* Réinitialisation générale */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .left-section, .right-section {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: white;
+        }
+
+        .left-section {
+            background-color: #9baf53;
+            position: relative;
+            overflow: hidden;
+            animation: slideIn 1s ease-out;
+        }
+
+        .left-section::before {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            left: -50px;
+            width: 120px;
+            height: 120px;
+            background-color: white;
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .left-section h1 {
+            color: #003366;
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+            z-index: 1;
+            position: relative;
+        }
+
+        .left-section h1::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: #ffd700;
+            margin-top: 10px;
+        }
+
+        .left-section p {
+            color: #000;
+            z-index: 1;
+            position: relative;
+        }
+
+        .right-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .right-section p {
+            background-color: #d2b7d3;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            flex: 1;
+        }
+
+        .right-section img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        /* Animations */
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .phone-icon {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .availability {
+            color: green;
+            font-size: 14px;
+        }
+    </style>
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Section gauche -->
+        <div class="left-section">
+            <h1>RÉUSSIR SES COURS PARTICULIERS DE LECTURE</h1>
+            <p>Que vous soyez un adolescent en quête de fluidité ou un adulte désireux de maîtriser l'art de la lecture, nos cours particuliers sur mesure sont conçus pour répondre à vos besoins uniques. 
+            </p><br>
+            <p>Nos enseignants passionnés et expérimentés vous aideront à :
+            </p>
+            <ul>
+                <li>Développer une lecture courante et compréhensible
+                </li>
+                <li>Renforcer la compréhension des textes
+                </li>
+                <li>Cultiver la confiance en soi dans vos compétences en lecture
+                </li>
+            </ul>
+            <br>
+            <p>Ne laissez pas les difficultés de lecture vous freiner. Rejoignez-nous dès aujourd'hui pour un accompagnement personnalisé qui fera toute la différence dans votre parcours d'apprentissage. Contactez-nous et ouvrez la porte à de nouvelles opportunités !</p>
+        </div>
+
+        <!-- Section droite -->
+        <div class="right-section">
+            <i class="phone-icon"></i>
+            <p>Appeler au 09 72 72 83 83</p>
+            <p class="availability">Disponible jusqu'à 19h</p>
+            <img src="image/lecture.jpg" alt="Élève et enseignant">
+        </div>
+    </div>
+
+</body>
+</html>

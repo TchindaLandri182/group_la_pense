@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recrutement d'Enseignants</title>
+
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-image: url(image/recru.png);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        /* Container */
+        .container {
+         background:transparent;
+            padding: 50px 40px;
+            border-radius: 15px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 700px;
+            transform: translateY(50px);
+            opacity: 0;
+            animation: slideUp 1s ease-out forwards;
+        }
+
+        @keyframes slideUp {
+            0% {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Title */
+        h2 {
+            text-align: center;
+            color: yellow; /*yellow */
+            margin-bottom: 25px;
+            font-size: 28px;
+        }
+
+        /* Input Box Styles */
+        .inputBox {
+            position: relative;
+            margin-bottom: 25px;
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        .inputBox:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .inputBox:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .inputBox:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .inputBox:nth-child(4) {
+            animation-delay: 0.8s;
+        }
+
+        .inputBox:nth-child(5) {
+            animation-delay: 1s;
+        }
+
+        .inputBox:nth-child(6) {
+            animation-delay: 1.2s;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .inputBox input,
+        .inputBox select,
+        .inputBox textarea {
+            width: 100%;
+            padding: 14px 20px;
+            border: 2px solid #007bff; /* Blue */
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            font-size: 16px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .inputBox input:focus,
+        .inputBox select:focus,
+        .inputBox textarea:focus {
+            border-color: #ffc107; /* Yellow */
+            background-color: #ffffff;
+        }
+
+        .inputBox label {
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            font-size: 14px;
+            color: yellow; /* Blue */
+            transition: all 0.3s ease;
+        }
+
+        .inputBox input:focus + label,
+        .inputBox select:focus + label,
+        .inputBox textarea:focus + label {
+            top: -22px;
+            font-size: 12px;
+            color: #ffc107; /* Yellow */
+        }
+
+        /* Textarea */
+        .inputBox textarea {
+            height: 120px;
+            resize: none;
+        }
+
+        /* Submit Button */
+        .submit-btn {
+            width: 100%;
+            padding: 16px;
+            background: #ffc107; /* Yellow */
+            color: blue; /* Blue */
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: yellow; /* Darker Yellow */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+
+            .inputBox input,
+            .inputBox select,
+            .inputBox textarea {
+                font-size: 14px;
+            }
+
+            .submit-btn {
+                font-size: 16px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Recrutement d'Enseignants</h2>
+
+        <form action="#" method="POST">
+            <div class="inputBox">
+                <input type="text" id="name" name="name" required>
+                <label for="name">Nom complet</label>
+            </div>
+
+            <div class="inputBox">
+                <input type="email" id="email" name="email" required>
+                <label for="email">Email</label>
+            </div>
+
+            <div class="inputBox">
+                <input type="tel" id="phone" name="phone" required>
+                <label for="phone">Numéro de téléphone</label>
+            </div>
+
+            <div class="inputBox">
+                <input type="date" id="availability" name="availability" required>
+                <label for="availability">Disponibilité</label>
+            </div>
+
+            <div class="inputBox">
+                <input type="text" id="subject" name="subject" required>
+                <label for="subject">Discipline enseignée</label>
+            </div>
+
+            <div class="inputBox">
+                <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required>
+                <label for="cv">Télécharger votre CV</label>
+            </div>
+
+            <button type="submit" class="submit-btn">Postuler</button>
+        </form>
+    </div>
+
+</body>
+</html>
+
+
+<!--
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recrutement d'Enseignants</title>
+
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-image: url('image/recru.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        /* Container */
+        .container {
+            background: rgba(255, 255, 255, 0.85); /* Semi-transparent white */
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 700px;
+            animation: slideIn 0.7s ease-out forwards;
+        }
+
+        /* Animation */
+        @keyframes slideIn {
+            0% {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Title */
+        h2 {
+            text-align: center;
+            color: #007bff; /* Blue */
+            font-size: 28px;
+            margin-bottom: 25px;
+        }
+
+        /* Input Box Styles */
+        .inputBox {
+            position: relative;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        .inputBox:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .inputBox:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .inputBox:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .inputBox:nth-child(4) {
+            animation-delay: 0.8s;
+        }
+
+        .inputBox:nth-child(5) {
+            animation-delay: 1s;
+        }
+
+        .inputBox:nth-child(6) {
+            animation-delay: 1.2s;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .inputBox input,
+        .inputBox select,
+        .inputBox textarea {
+            width: 100%;
+            padding: 14px 20px;
+            border: 2px solid #007bff; /* Blue */
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            font-size: 16px;
+            color: #333;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .inputBox input:focus,
+        .inputBox select:focus,
+        .inputBox textarea:focus {
+            border-color: #ffc107; /* Yellow */
+            background-color: #fff;
+        }
+
+        .inputBox label {
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            font-size: 14px;
+            color: #007bff; /* Blue */
+            transition: all 0.3s ease;
+        }
+
+        .inputBox input:focus + label,
+        .inputBox select:focus + label,
+        .inputBox textarea:focus + label {
+            top: -22px;
+            font-size: 12px;
+            color: #ffc107; /* Yellow */
+        }
+
+        /* Textarea */
+        .inputBox textarea {
+            height: 120px;
+            resize: none;
+        }
+
+        /* Submit Button */
+        .submit-btn {
+            width: 100%;
+            padding: 16px;
+            background: #ffc107; /* Yellow */
+            color: #007bff; /* Blue */
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #ffb300; /* Darker Yellow */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+
+            .inputBox input,
+            .inputBox select,
+            .inputBox textarea {
+                font-size: 14px;
+            }
+
+            .submit-btn {
+                font-size: 16px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Recrutement d'Enseignants</h2>
+
+        <form action="#" method="POST">
+             Nom complet 
+            <div class="inputBox">
+               <input type="text" id="name" name="name" required>
+               <label for="name">Nom complet</label>
+           </div>
+
+            Email 
+           <div class="inputBox">
+               <input type="email" id="email" name="email" required>
+               <label for="email">Email</label>
+           </div>
+
+           Numéro de téléphone 
+           <div class="inputBox">
+               <input type="tel" id="phone" name="phone" required>
+               <label for="phone">Numéro de téléphone</label>
+           </div>
+
+            Disponibilité 
+           <div class="inputBox">
+               <input type="date" id="availability" name="availability" required>
+               <label for="availability">Disponibilité</label>
+           </div>
+
+            Discipline enseignée 
+           <div class="inputBox">
+               <input type="text" id="subject" name="subject" required>
+               <label for="subject">Discipline enseignée</label>
+           </div>
+
+           Télécharger le CV 
+           <div class="inputBox">
+               <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required>
+               <label for="cv">Télécharger votre CV</label>
+           </div>
+ Bouton de soumission 
+           <button type="submit" class="submit-btn">Postuler</button>
+       </form>
+   </div>
+
+</body>
+
+</html>
+
+
+-->

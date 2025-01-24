@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COURS D’ÉCRITURE</title>
+    <style>
+        /* Réinitialisation générale */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .left-section, .right-section {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: white;
+        }
+
+        .left-section {
+            background-color: #8061a8;
+            position: relative;
+            overflow: hidden;
+            animation: bounceIn 1.2s ease-out;
+        }
+
+        .left-section::before {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            left: -50px;
+            width: 120px;
+            height: 120px;
+            background-color: white;
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .left-section h1 {
+            color: #003366;
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+            z-index: 1;
+            position: relative;
+        }
+
+        .left-section h1::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: #ffd700;
+            margin-top: 10px;
+        }
+
+        .left-section p {
+            color: #000;
+            z-index: 1;
+            position: relative;
+        }
+
+        .right-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: all 0.8s ease-in-out;
+        }
+
+        .right-section.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .right-section p {
+            background-color: #e6a749;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            flex: 1;
+        }
+
+        .right-section img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        /* Animations */
+        @keyframes bounceIn {
+            0% {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            60% {
+                transform: scale(1.2);
+                opacity: 1;
+            }
+            80% {
+                transform: scale(0.95);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        .phone-icon {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .availability {
+            color: green;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="left-section">
+            <h1>COURS D’ÉCRITURE</h1>
+            <p>Les cours d'écriture pour jeunes et adultes visent à améliorer les compétences rédactionnelles de chaque participant, qu'il s'agisse de développer des capacités d'expression personnelle, de préparer des documents académiques ou professionnels, ou simplement d'apprendre à écrire ou d’améliorer sa main d’écriture. Ces cours s'adaptent aux besoins spécifiques des apprenants, qu'ils soient débutants ou déjà avancés dans leur pratique.</p><br>
+
+            <p><strong>Nos atouts</strong></p>
+            <ul>
+                <li>Développement des compétences : Amélioration de la grammaire, de la syntaxe et du vocabulaire.</li>
+                <li>Approche personnalisée : Cours adaptés aux niveaux et intérêts individuels.</li>
+                <li>Encadrement professionnel : Enseignants expérimentés qui offrent un retour constructif.</li>
+                <li>Créativité : Encouragement à explorer différents styles d'écriture et genres littéraires.</li>
+            </ul><br>
+
+            <p><strong>Nos approches</strong></p>
+            <ul>
+                <li>Ateliers pratiques : Sessions interactives où les participants écrivent et partagent leurs travaux.</li>
+                <li>Exercices ciblés : Activités spécifiques pour travailler sur des aspects particuliers de l’écriture (narration, description, argumentation).</li>
+                <li>Lectures et analyses : Étude de textes variés pour comprendre les techniques d’écriture.</li>
+                <li>Feedback régulier : Retour sur les travaux écrits pour aider à progresser.</li>
+                <li>Contrôle continu : contrôle l’évolution des apprenants</li>
+            </ul><br>
+
+            <p><strong>Nos services</strong></p>
+            <ul>
+                <li><strong>Pack DÉBUTANT :</strong>
+                    <ul>
+                        <li>Condition : Aucun prérequis.</li>
+                        <li>Tarif : 30 000 FCFA.</li>
+                        <li>Durée : 4 semaines (2 séances par semaine).</li>
+                    </ul>
+                </li>
+                <li><strong>Pack INTERMÉDIAIRE :</strong>
+                    <ul>
+                        <li>Condition : Avoir complété le pack débutant ou équivalent.</li>
+                        <li>Tarif : 50 000 FCFA.</li>
+                        <li>Durée : 5 semaines (3 séances par semaine).</li>
+                    </ul>
+                </li>
+                <li><strong>Pack AVANCÉ :</strong>
+                    <ul>
+                        <li>Condition : Avoir terminé le pack intermédiaire ou avoir une expérience préalable en écriture.</li>
+                        <li>Tarif : 80 000 FCFA.</li>
+                        <li>Durée : 6 semaines (3 séances par semaine).</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="right-section show"> 
+            <i class="phone-icon"></i>
+            <p>Appeler au 09 72 72 83 83</p>
+            <p class="availability">Disponible jusqu'à 19h</p>
+            <img src="image/ecriture.jpg" alt="Élève et enseignant">
+        </div>
+    </div>
+
+</body>
+</html>

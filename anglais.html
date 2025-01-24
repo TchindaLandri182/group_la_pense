@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réussir ses cours d'Anglais</title>
+   <style>
+    /* Réinitialisation */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corps de la page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    overflow-x: hidden;
+}
+
+/* Conteneur principal */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Section gauche */
+.left-section {
+    flex: 1 1 50%;
+    background-color: #4a90e2;
+    color: #fff;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: slideInFromLeft 1s ease-out;
+}
+
+.left-section h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.left-section h1::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 5px;
+    background-color: #f9c52e;
+    margin-top: 10px;
+    animation: growBar 1s ease-out forwards;
+}
+
+.left-section p {
+    font-size: 1.2rem;
+    color: #e6e6e6;
+    margin-top: 20px;
+    line-height: 1.6;
+    animation: fadeInText 2s ease-out;
+}
+
+.left-section ul {
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+.left-section ul li {
+    font-size: 1.1rem;
+    color: #f9c52e;
+    margin-bottom: 15px;
+    animation: fadeInText 2s ease-out;
+}
+
+/* Section droite */
+.right-section {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px;
+    animation: slideInFromRight 1s ease-out;
+}
+
+.text-box {
+    background-color: #f9c52e;
+    padding: 20px;
+    border-radius: 8px;
+    color: #333;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-out forwards;
+}
+
+.text-box p {
+    margin: 10px 0;
+}
+
+.phone-icon {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.availability {
+    color: #4a90e2;
+    font-size: 1rem;
+}
+
+.image-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: zoomIn 2s ease-out forwards;
+}
+
+.image-box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transform: scale(0.8);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.image-box img:hover {
+    transform: scale(1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes growBar {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100px;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-section, .right-section {
+        flex: 1 1 100%;
+    }
+}
+   </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Section Gauche -->
+        <div class="left-section">
+            <h1>RÉUSSIR SES COURS D'ANGLAIS</h1>
+        <p><strong>Découvrez Nos Cours d'Anglais Adaptés à Vos Besoins</strong></p> 
+        <p>Vous souhaitez maîtriser l'anglais pour booster votre carrière, réussir vos études ou voyager avec assurance ? Rejoignez nos cours d’anglais et découvrez une méthode simple, efficace et motivante pour atteindre vos objectifs linguistiques !</p>
+        <p><strong>Pourquoi choisir nos cours ?</strong></p><br>
+         <ul>
+            <li><strong>Pour tous les niveaux </strong>Débutant, intermédiaire ou avancé, nos programmes s’adaptent à votre niveau et à vos ambitions.</li><br>
+            <li><strong>Méthode interactive :</strong>Apprenez en vous amusant grâce à des exercices pratiques, des jeux, et des mises en situation.</li><br>
+            <li><strong>Enseignants qualifiés :</strong>Profitez de l’expertise et de la bienveillance de nos professeurs, spécialisés dans l’enseignement de l’anglais.</li><br>
+            <li><strong>Cours flexibles </strong>Optez pour des cours en ligne ou en présentiel selon vos besoins et votre emploi du temps</li><br>
+            <li><strong>Progrès rapides :</strong> Notre approche innovante vous garantit des résultats visibles en un temps record.</li><br>
+         </ul>
+        </div>
+        <!-- Section Droite -->
+        <div class="right-section">
+            <div class="text-box">
+                <p>
+                    <i class="phone-icon"></i>
+                    <p>Appeler au 09 72 72 83 83</p>
+                    <p class="availability">Disponible jusqu'à 19h</p>
+                </p>
+            </div>
+            <div class="image-box">
+                <img src="image/Anglais.jpg" alt="Drapeau anglais">
+       </div>
+        </div>
+    </div>
+</body>
+</html>

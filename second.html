@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOUTIEN SCOLAIRE AU LYCÉE</title>
+    <style>
+        /* Réinitialisation générale */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .left-section, .right-section {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: white;
+        }
+
+        .left-section {
+            background-color: #76a5af;
+            position: relative;
+            overflow: hidden;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .left-section h1 {
+            color: #003366;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+            z-index: 1;
+        }
+
+        .left-section h1::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 5px;
+            background-color: #ffd700;
+            margin-top: 10px;
+        }
+
+        .left-section p, .left-section ul {
+            color: #000;
+            z-index: 1;
+            position: relative;
+        }
+
+        .right-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            animation: slideInRight 1.5s ease-out;
+        }
+
+        .right-section p {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .right-section img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Section gauche -->
+        <div class="left-section">
+            <h1>SOUTIEN SCOLAIRE AU LYCÉE</h1>
+            <p>Le soutien scolaire à domicile pour les élèves du lycée vise à accompagner les élèves dans leur parcours scolaire, en les aidant à renforcer leurs compétences dans les matières clés et à préparer efficacement les examens.</p>
+            <br>
+            <p><strong>Nos Atouts :</strong></p>
+            <ul>
+                <li>Accompagnement personnalisé : Le soutien est adapté aux besoins spécifiques de chaque élève.</li>
+                <li>Préparation aux examens : Révisions et aide pour les épreuves du baccalauréat et autres examens.</li>
+                <li>Développement de méthodes de travail : Gestion du temps, organisation et méthodologie pour réussir.</li>
+                <li>Suivi régulier : Évaluations fréquentes pour mesurer les progrès.</li>
+                <li>Cours de langue : Possibilité d'alternance entre plusieurs langues.</li>
+            </ul>
+            <br>
+            <p><strong>Nos Approches :</strong></p>
+            <ul>
+                <li>Évaluation des besoins : Identification des matières où l'élève a besoin de soutien.</li>
+                <li>Planification des cours : Calendrier adapté tenant compte des échéances scolaires.</li>
+                <li>Approche interactive : Supports variés pour rendre l'apprentissage dynamique.</li>
+                <li>Feedback constructif : Conseils réguliers pour progresser.</li>
+            </ul>
+            <p><strong>Tarifs :</strong></p>
+            <ul>
+                <li>Pack INDIVIDUEL : 50 000 FCFA par mois (3 séances par semaine).</li>
+                <li>Pack PRÉPARATION AUX EXAMENS : 90 000 FCFA par mois (2 séances par semaine).</li>
+            </ul>
+        </div>
+
+        <!-- Section droite -->
+        <div class="right-section">
+            <i class="phone-icon"></i>
+            <p>Appeler au 09 72 72 83 83 <br>Disponible jusqu'à 19h</p>
+            
+            <img src="image/topo.jpeg" alt="Élève studieux au lycée">
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boutons Flottants</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 2000px; /* Ajouté pour démonstration */
+            background-color: #f9f9f9;
+        }
+
+        .floating-buttons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 1000;
+        }
+
+        .floating-button {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .floating-button:hover {
+            transform: scale(1.1);
+        }
+
+        .whatsapp {
+            background-color: #25d366;
+            color: white;
+            border: 2px solid #128c7e;
+        }
+
+        .facebook {
+            background-color: #3b5998;
+            color: white;
+            border: 2px solid #2d4373;
+        }
+
+        .instagram {
+            background-color: #e4405f;
+            color: white;
+            border: 2px solid #bc2a8d;
+        }
+
+        .back-to-top {
+            background-color: #ff5722;
+            color: white;
+            border: 2px solid #e64a19;
+        }
+
+        .floating-button i {
+            font-size: 24px;
+        }
+
+        /* Bouton "Retour vers le haut" caché par défaut */
+        .back-to-top {
+            display: none;
+        }
+
+        /* Apparence sur petits écrans */
+        @media (max-width: 768px) {
+            .floating-buttons {
+                bottom: 10px;
+                right: 10px;
+            }
+
+            .floating-button {
+                width: 40px;
+                height: 40px;
+            }
+
+            .floating-button i {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Bienvenue sur la page avec boutons flottants</h1>
+    <p>Faites défiler la page pour voir les boutons flottants en action.</p>
+
+    <div class="floating-buttons">
+        <!-- Bouton WhatsApp -->
+        <a href="https://wa.me/1234567890" target="_blank" class="floating-button whatsapp" title="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+
+        <!-- Bouton Facebook -->
+        <a href="https://facebook.com/yourpage" target="_blank" class="floating-button facebook" title="Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <!-- Bouton Instagram -->
+        <a href="https://instagram.com/yourprofile" target="_blank" class="floating-button instagram" title="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <!-- Bouton Retour vers le haut -->
+        <div class="floating-button back-to-top" title="Retour vers le haut">
+            <i class="fas fa-arrow-up"></i>
+        </div>
+    </div>
+
+    <script>
+        // Affichage du bouton "Retour vers le haut" au défilement
+        const backToTopButton = document.querySelector('.back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 200) {
+                backToTopButton.style.display = 'flex';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        // Remonter en haut de la page
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+
+    <!-- Inclusion de FontAwesome pour les icônes (nécessaire pour i) -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>

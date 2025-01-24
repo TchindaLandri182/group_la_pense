@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css" integrity="sha384-NvKbDTEnL+A8F/AA5Tc5kmMLSJHUO868P+lDtTpJIeQdGYaUIuLr4lVGOEA1OcMy" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+    <link rel="stylesheet" href="https://use.fsontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap">
+    <link rel="stylesheet" href="file///C:/fontawasome-free-5.13.0-web/css/all.css">
+
+
+    <link rel="stylesheet" href="https:cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha 512-iecdlmask17CVkqkXNQ/ZH/XL1vWZOJyj7Yy7tcenmpD1ypASozpm/E0iptmFIB46ZmdtAc9eNBvH0H/Z"
+    crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+
+    <title>Historique de l'Organisation</title>
+   <style>
+
+
+
+      /* Header */
+      header {
+    background: #0056b3;
+    color: yellow;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styles généraux du corps de la page */
+body {
+    font-family: Arial, sans-serif;
+    background-color:#eff786;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Section Historique */
+.historique {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(9, 24, 240, 0.897);
+}
+
+/* Titre de la section */
+.historique h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: blue;
+    margin-bottom: 30px;
+}
+/* Description de l'historique */
+.historique-description {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    line-height: 1.8;
+    color: blue;
+}
+
+
+/* Container de la timeline */
+.timeline {
+    position: relative;
+    padding-left: 20px;
+}
+
+.timeline-item {
+    margin-bottom: 30px;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(70, 9, 240, 0.897);
+}
+
+/* Le cercle et l'année */
+.timeline-year {
+    position: absolute;
+    left: -20px;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    color: blue;
+    font-size: 18px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgb(240, 236, 9);
+}
+
+/* Contenu de chaque item de la timeline */
+.timeline-content {
+    margin-left: 60px;
+    padding: 15px;
+    background-color:white;
+    border-radius: 8px;
+}
+
+.timeline-content h3 {
+    font-size: 1.2rem;
+    color: #2980b9;
+    margin-bottom: 10px;
+}
+
+.timeline-content p {
+    font-size: 1rem;
+    color: #34495e;
+    line-height: 1.5;
+    
+}
+
+/* Pour les petits écrans, rendre la timeline plus lisible */
+@media (max-width: 768px) {
+    .timeline {
+        padding-left: 0;
+    }
+    .timeline-item {
+        margin-bottom: 20px;
+    }
+    .timeline-year {
+        left: -40px;
+    }
+    .timeline-content {
+        margin-left: 40px;
+    }
+}
+
+ /*--Footer--*/
+ @import url('https://fonts.googleapis.com/css2?family=poppins:wght@300;400;500;600;700&display=swap');
+    body{
+      line-height: 1.5;
+      font-family: 'poppins', sans-serif;
+    }
+  .container{
+     max-width: 1170px;
+     margin: auto; 
+    }
+    .row{
+      display: flex;
+      flex-wrap: wrap;
+    }
+    ul{
+    list-style: none;
+    }
+  #footer{
+    background-color: #24262b;
+    padding: 25px 0;
+  }
+  .footer-col{
+   width: 25%;
+   padding: 0 15px;
+  }
+  .footer-col h4{
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+  }
+  .footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+  }
+  .footer-col ul li:not(:last-child){
+    margin-bottom: 10px ;
+  }
+  .footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffff;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  .footer-col ul li a:hover{
+    color: #ffffff;
+    padding-left: 8px;
+  }
+  .footer-col .social-links a{
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+      background-color: rgba(255, 255, 255, 0.2);
+      margin:0 10px 10px 0;
+      text-align: center;
+      line-height: 40px;
+      border-radius: 50%;
+      color: #ffff;
+      transition: all 0.5 ease;
+  }
+  .footer-col .social-links a:hover{
+    color: #24262b;
+    background-color: #ffff;
+  }
+  /*--Footer responsive--*/
+  @media(max-width:767px){
+    .footer-col{
+      width: 50%;
+      margin-bottom: 30px;
+    }
+  }
+  @media(max-width:574px){
+    .footer-col{
+      width: 100%;
+    }
+  }
+
+
+  
+   </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+          <h1>Historique de notre groupe</h1>
+        </div>
+      </header>
+    <section class="historique">
+        <h1>Notre Histoire</h1>
+        <p class="historique-description">
+            Depuis sa création, notre structure a connu une évolution marquante. Découvrez les étapes clés qui ont façonné notre parcours et notre succès.
+        </p>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-year">2010</div>
+                <div class="timeline-content">
+                    <h3>Création de l'organisation</h3>
+                    <p>En 2010, Le Groupe La Pensée est né avec une mission claire : offrir des services innovants dans le domaine de l'éducation. Dès ses débuts, notre vision a été de révolutionner l'apprentissage en le rendant à la fois accessible et véritablement enrichissant. Grâce à notre approche unique et à notre engagement envers l'excellence, nous sommes devenus une référence incontournable pour ceux qui recherchent une éducation de qualité et des résultats exceptionnels. Le Groupe La Pensée, où chaque élève trouve les clés de sa réussite</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2016</div>
+                <div class="timeline-content">
+                    <h3>Expansion nationale</h3>
+                    <p>En 2016, Le Groupe La Pensée a franchi une étape majeure dans son expansion, élargissant son impact éducatif au-delà des frontières. Nous avons intégré les baccalauréats étrangers, notamment centrafricain et tchadien, dans nos cours, répondant ainsi aux besoins d’un public diversifié. Par ailleurs, notre présence s’est renforcée avec l’ouverture de nouveaux centres stratégiquement localisés au Cameroun, en Centrafrique et au Tchad. Cette expansion reflète notre engagement à fournir une éducation de qualité accessible à tous, partout où elle est nécessaire. Le Groupe La Pensée, un pont vers la réussite pour toute l’Afrique centrale</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2019</div>
+                <div class="timeline-content">
+                    <h3>Innovation technologique</h3>
+                    <p>En 2019, Le Groupe La Pensée a marqué un tournant en intégrant les technologies numériques dans son approche pédagogique grâce au lancement de l'application éducative Famnoh. Cette plateforme innovante, dédiée au suivi scolaire en ligne pour le primaire, le secondaire et le supérieur, a transformé l'apprentissage en le rendant plus interactif, personnalisé et accessible. Avec Famnoh, nous offrons aux élèves, aux parents et aux enseignants un outil moderne pour maximiser la réussite éducative. Le Groupe La Pensée, toujours à la pointe de l'innovation pour un avenir meilleur.</p>
+                </div>
+            </div>
+           
+        </div>
+    </section>
+
+  
+    <!--footer-->
+
+    <section id="footer">
+        <footer class="footer">
+          <div class="container">
+              <div class="row">
+                  <div class="footer-col">
+                      <h4>Menu</h4>
+                      <ul>
+                        <li>  <a href="#header" class="dropbtn">About <span class="caret"></span></a></li>
+                       <li> <a href="">Services</a></li>
+                       <li> <a href="">Témoignages</a></li>
+                        <li><a href="">Contacts</a></li>
+                  
+                      </ul>
+                  </div>
+                  <div class="footer-col">
+                      <h4>Nos services</h4>
+                      <ul>
+                          <li><a href="bac.html">BAC étrangers</a></li>
+                          <li><a href="cours.html">Cours de langues</a></li>
+                          <li><a href="prepas.html">Préparation aux concours</a></li>
+                          <li><a href="soutien.html">Soutien scolaire à domicile</a></li>
+                          <li><a href="recru.html">Recrutement d'enseignants</a></li>
+                      </ul>
+                  </div>
+                  <div class="footer-col">
+                      <img src="images/Groupe la pensee.png" width="200" height="200">
+                  </div>
+                  <div class="footer-col">
+                      <h4>Follow us</h4>
+                      <div class="social-links">
+                          <a href="#"><i class="fab fa-facebook-f"></i></a>
+                          <a href="https://wa.me/qr/5YDVHA3AHLRTM1"><i class="fab fa-whatsapp"></i></a>
+                          <a href="#"><i class="fab fa-instagram"></i></a>
+                      </div>
+                  </div>
+              </div>
+          </div> 
+        </footer>
+      </section>
+        
+      
+</body>
+</html>

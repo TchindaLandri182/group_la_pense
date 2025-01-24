@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accompagnement Scolaire</title>
+    <style>
+        /* Réinitialisation générale */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .left-section, .right-section {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .left-section {
+            background-color: #cce7ff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .left-section::before {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            left: -50px;
+            width: 120px;
+            height: 120px;
+            background-color: white;
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .left-section h1 {
+            color: #003366;
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+            z-index: 1;
+            position: relative;
+        }
+
+        .left-section h1::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: #ffd700;
+            margin-top: 10px;
+        }
+
+        .left-section p {
+            color: #000;
+            z-index: 1;
+            position: relative;
+        }
+
+        .left-section ul {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        .left-section ul li {
+            list-style-type: square;
+            margin-bottom: 10px;
+        }
+
+        .right-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .right-section p {
+            background-color: #e6e6e6;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            flex: 1;
+        }
+
+        .right-section img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .phone-icon {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .availability {
+            color: green;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Section gauche -->
+        <div class="left-section">
+            <h1>Accompagnement Scolaire</h1>
+            <p>
+                L'accompagnement des enfants à l'école est un service qui aide les parents en prenant en charge le transport et l'encadrement des enfants lors de leurs déplacements vers et depuis l'école. Ce service peut inclure les trajets à pied, en voiture ou en transport en commun, selon les besoins des familles.
+            </p>
+            
+            <p><strong>Nos Atouts :</strong></p>
+            <ul>
+                <li><strong>Sécurité :</strong> Les enfants sont accompagnés par un adulte responsable, ce qui assure leur sécurité pendant le trajet.</li>
+                <li><strong>Régularité :</strong> Un accompagnement régulier aide à instaurer une routine, ce qui est bénéfique pour les enfants.</li>
+                <li><strong>Soutien Émotionnel :</strong> Les enfants peuvent se sentir plus à l'aise et confiants lorsqu'ils sont accompagnés, surtout s'ils sont jeunes ou s'ils découvrent un nouvel environnement scolaire.</li>
+                <li><strong>Socialisation :</strong> L'accompagnement peut favoriser les interactions avec d'autres enfants, renforçant ainsi les liens sociaux.</li>
+            </ul>
+
+            <p><strong>Nos Approches :</strong></p>
+            <ul>
+                <li><strong>Planification des Trajets :</strong> Établir des itinéraires sécurisés et efficaces pour le transport des enfants.</li>
+                <li><strong>Suivi des Horaires :</strong> Assurer que les enfants arrivent à l'heure à l'école et qu'ils soient récupérés après les cours.</li>
+                <li><strong>Communication avec les Parents :</strong> Maintenir un dialogue ouvert avec les parents pour discuter des besoins spécifiques de chaque enfant et de leur progression.</li>
+            </ul>
+        </div>
+
+        <!-- Section droite -->
+        <div class="right-section">
+            <i class="phone-icon"></i>
+            <p>Appeler au 09 72 72 83 83</p>
+            <p class="availability">Disponible jusqu'à 19h</p>
+            <img src="image/accompagnement.jpg" alt="Accompagnement scolaire">
+        </div>
+    </div>
+
+</body>
+</html>

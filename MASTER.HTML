@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soutien Scolaire MASTER 1 & 2</title>
+    <style>
+        /* Réinitialisation générale */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .left-section, .right-section {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .left-section {
+            background-color: #6cbbc5;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .left-section::before {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            left: -50px;
+            width: 120px;
+            height: 120px;
+            background-color: white;
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .left-section h1 {
+            color: #003366;
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+            z-index: 1;
+            position: relative;
+        }
+
+        .left-section h1::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: #ffd700;
+            margin-top: 10px;
+        }
+
+        .left-section p, .left-section ul {
+            color: #000;
+            z-index: 1;
+            position: relative;
+        }
+
+        .right-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .right-section p {
+            background-color: #e6e6e6;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            flex: 1;
+        }
+
+        .right-section img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Section gauche -->
+        <div class="left-section">
+            <h1>Soutien Scolaire MASTER 1 & 2</h1>
+            <p>Le soutien scolaire à domicile pour les étudiants de Master 1 et 2 est conçu pour aider les étudiants à réussir dans leurs études supérieures. Ce service se concentre sur des matières spécifiques, la rédaction de mémoires, la préparation aux examens, ainsi que sur le développement de compétences académiques avancées.</p>
+            <br>
+            <p><strong>Nos Atouts :</strong></p>
+            <ul>
+                <li>Accompagnement sur mesure : Adapté aux besoins individuels.</li>
+                <li>Flexibilité d'organisation : Séances adaptées à votre emploi du temps.</li>
+                <li>Soutien dans des matières variées : Sciences humaines, gestion, etc.</li>
+                <li>Aide à la rédaction : Structuration et rédaction des mémoires.</li>
+            </ul>
+            <br>
+            <p><strong>Nos Approches :</strong></p>
+            <ul>
+                <li>Évaluation initiale : Identification des matières à renforcer.</li>
+                <li>Programmation des cours : Calendrier adapté aux échéances.</li>
+                <li>Approche interactive : Méthodes engageantes pour maximiser l'apprentissage.</li>
+                <li>Suivi personnalisé : Feedback et ajustements réguliers.</li>
+            </ul>
+            <br>
+            <p><strong>Tarifs :</strong></p>
+            <ul>
+                <li><strong>Pack PETIT GROUPE :</strong> 25 000 FCFA / mois (3 séances/semaine).</li>
+                <li><strong>Pack INDIVIDUEL :</strong> 45 000 FCFA / mois (3 séances/semaine).</li>
+                <li><strong>Pack PRÉPARATION AUX EXAMENS ET MÉMOIRES :</strong> 70 000 FCFA / mois (2 séances/semaine).</li>
+            </ul>
+        </div>
+
+        <!-- Section droite -->
+        <div class="right-section">
+            <p>Pour en savoir plus, contactez-nous dès aujourd'hui !</p>
+            <img src="image/master.jpg" alt="Étudiant préparant son Master">
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,363 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Professionnel</title>
+      <!-- Liens vers les icônes Font Awesome (tu peux les inclure directement depuis un CDN) -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <style>
+
+.content{
+  max-width: 650px;
+  margin: 60px 100px;
+}
+.content .info h1{
+color: #0e0af5;
+font-size: 55px;
+text-transform: uppercase;
+font-weight: 800;
+letter-spacing: 2px;
+line-height: 60px;
+margin-bottom: 30px;
+}
+.content .info h1 span{
+  color: #f9fd09;
+  font-size: 50px;
+  font-weight: 600;
+}
+.content .info p{
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 40px;
+
+}
+.content .info-btn{
+  color: #fff;
+  background: #1707f8;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+.content .info-btn:hover{
+  background: yellow;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: url(image/school.jpeg);
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+    position: relative;
+}
+
+.logo img {
+    width: 100px;  /* Taille du logo */
+}
+
+.navbar {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu {
+    display: flex;
+    list-style-type: none;
+    gap: 30px;
+}
+
+.menu > li {
+    position: relative;
+}
+
+.menu > li > a {
+    color: white;
+    padding: 12px 18px;
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.menu > li > a:hover {
+    background-color: #0066cc;
+    border-radius: 5px;
+}
+
+/* Submenu Styles */
+.submenu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    position: absolute;
+    background-color: #333;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    border-radius: 5px;
+}
+
+.submenu li a {
+    padding: 12px 18px;
+    color: white;
+    display: block;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.submenu li a:hover {
+    background-color: #0066cc;
+}
+
+.menu > li:hover .submenu {
+    display: block;
+}
+
+/* Hamburger menu (for mobile view) */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    z-index: 999;
+}
+
+.hamburger .bar {
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .logo {
+        margin-right: auto;
+    }
+
+    .navbar {
+        display: none; /* Hide navbar on mobile */
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .menu {
+        flex-direction: column;
+        width: 100%;
+        padding: 10px 0;
+        background-color: #004d99;
+    }
+
+    .menu > li {
+        width: 100%;
+    }
+
+    .menu > li > a {
+        padding: 10px 30px;
+        border-top: 1px solid #ccc;
+    }
+
+    .menu > li > a:hover {
+        background-color: #0066cc;
+    }
+
+    .submenu {
+        position: relative;
+        display: block;
+        width: 100%;
+        background-color: #333;
+    }
+
+    .submenu li a {
+        padding: 10px 30px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .menu > li > a::after {
+        content: '\25BC'; /* down arrow */
+        margin-left: 10px;
+    }
+
+    .menu > li > a.active::after {
+        content: '\25B2'; /* up arrow */
+    }
+}
+
+/* Transitions for smooth dropdown */
+.submenu,
+.menu > li > a {
+    transition: background-color 0.3s, height 0.3s ease;
+}
+
+
+
+.social-icons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    transition: transform 0.3s ease;
+}
+
+/* Conteneur des icônes */
+.icon-container {
+    display: none;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon {
+    background-color: #fff;
+    color: #333;
+    font-size: 24px;
+    padding: 12px;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: #0073e6;
+    color: white;
+    transform: scale(1.1);
+}
+
+.social-icon.whatsapp:hover {
+    background-color: #25D366;
+}
+
+.social-icon.facebook:hover {
+    background-color: #1877f2;
+}
+
+.social-icon.instagram:hover {
+    background-color: #e1306c;
+}
+
+/* Afficher les icônes au survol */
+.social-icons:hover .icon-container {
+    display: block;
+}
+
+.social-icons:hover .icon-container:first-child {
+    display: block;
+    transform: translateY(0);
+}
+
+.social-icons:hover .icon-container:nth-child(2) {
+    display: block;
+    transform: translateY(-60px);
+}
+
+.social-icons:hover .icon-container:nth-child(3) {
+    display: block;
+    transform: translateY(-120px);
+}
+
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="images/Groupe la pensee.png" width="80" height="80">
+        </div>
+        <nav class="navbar">
+            <ul class="menu">
+                <li><a href="#">A propos</a>
+                    <ul class="submenu">
+                        <li><a href="#">Mot du DG</a></li>
+                        <li><a href="#">Brève histoire</a></li>
+                        <li><a href="#">Nos services</a></li>
+                        <li><a href="#">Nos valeurs</a></li>
+                        <li><a href="#">La vision</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Services</a>
+                    <ul class="submenu">
+                        <li><a href="#">Prépas</a></li>
+                        <li><a href="#">Cours</a></li>
+                        <li><a href="#">Langue</a></li>
+                        <li><a href="#">Soutien</a></li>
+                        <li><a href="#">Recrutement</a></li>
+                        <li><a href="#">Bac</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Témoignages</a></li>
+                <li><a href="#">Contacts</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </header>
+    <div class="content">
+        <div class="info">
+            <h1>Le Groupe <br> <span>La Pensée</span></h1>
+            <h2 style="color: blue;">La réussite, un secret à Avoir+ Educ.</h2>
+            <p><h3 style="color: yellow;">"Il est temps de labourer, si tu souhaites récolters dans les prochains mois."</h3> </p>
+            <a href="#" class="info-btn">More Info</a>
+        </div>
+    </div>
+
+     <!-- Menu d'icônes déroulantes -->
+     <div class="social-icons">
+        <div class="icon-container">
+            <a href="https://wa.me/1234567890" target="_blank" class="social-icon whatsapp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+        <div class="icon-container">
+            <a href="https://www.facebook.com/yourpage" target="_blank" class="social-icon facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </div>
+        <div class="icon-container">
+            <a href="https://www.instagram.com/yourprofile" target="_blank" class="social-icon instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

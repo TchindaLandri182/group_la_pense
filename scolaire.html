@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Éducation - Groupe La Prairie</title>
+    <style>
+        /* Réinitialisation générale */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Style général */
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Barre de navigation */
+        .navbar {
+            background: transparent;
+            color: #000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s ease-in-out;
+        }
+
+        .navbar .logo img {
+            height: 60px;
+        }
+
+       
+       
+        .contact-btn {
+            background: #0078D7;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .contact-btn:hover {
+            background: #005bb5;
+        }
+
+        /* Menu mobile */
+        .navbar .menu-toggle {
+            display: none;
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .navbar nav {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(255, 215, 0, 0.95);
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+                display: none;
+                padding: 10px 0;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+
+            .navbar nav.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .navbar nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        /* Section principale */
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('image/soutien.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .hero-content {
+            color: white;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 8px;
+            animation: slideInFromTop 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            animation: fadeInUp 1.5s ease-out;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInFromTop {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 480px) {
+            .navbar .logo img {
+                height: 50px;
+            }
+
+            .navbar nav ul li {
+                font-size: 0.9em;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .contact-btn {
+                padding: 8px 16px;
+                font-size: 1rem;
+            }
+        }
+
+        /* Animation du texte */
+        .btn-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            z-index: 2;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .btn {
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: #0a07bdd5;
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background-color: #d9e70f;
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-secondary {
+            background-color: #0a07bdd5;
+            color: #fff;
+        }
+
+        .btn-secondary:hover {
+            background-color: #d9e70f;
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/Groupe la pensee.png" width="80" height="80">
+            </div>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        
+            <button class="contact-btn">Contactez-nous</button>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Bienvenue au Groupe La PENSÉE</h1>
+                <p>Offrez à vos enfants une éducation de qualité.</p>
+                <div class="btn-container">
+                    <a href="primaire.html" class="btn btn-primary">Primaire / Primary</a>
+                    <a href="college.html" class="btn btn-primary">Lycée / High School</a>
+                    <a href="superieur.html" class="btn btn-secondary">École Supérieure / Higher School</a>
+                    <a href="adulte.html" class="btn btn-primary">Adultes</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('.navbar nav');
+            nav.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

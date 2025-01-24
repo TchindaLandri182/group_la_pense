@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réussir ses cours de Français</title>
+    <style>
+        /* Réinitialisation */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Corps de la page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            overflow-x: hidden;
+        }
+
+        /* Conteneur principal */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        /* Section gauche */
+        .left-section {
+            flex: 1 1 50%;
+            background-color: #eaf4ff;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            animation: slideInFromLeft 1s ease-out;
+        }
+
+        .left-section h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #0056b3;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .left-section h1::after {
+            content: '';
+            display: block;
+            width: 120px;
+            height: 5px;
+            background-color: #ffc107;
+            margin-top: 10px;
+            animation: growBar 1s ease-out forwards;
+        }
+
+        .left-section p, .left-section ul li {
+            font-size: 1rem;
+            color: #333;
+            margin-top: 15px;
+            line-height: 1.8;
+            animation: fadeInText 1.5s ease-out;
+        }
+
+        .left-section ul {
+            margin-top: 20px;
+            list-style: none;
+        }
+
+        .left-section ul li {
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .left-section ul li::before {
+            content: '\2022';
+            color: #ffc107;
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -2px;
+        }
+
+        /* Section droite */
+        .right-section {
+            flex: 1 1 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+            animation: slideInFromRight 1s ease-out;
+        }
+
+        .text-box {
+            background-color: #0056b3;
+            padding: 20px;
+            border-radius: 8px;
+            color: #ffffff;
+            font-size: 1rem;
+            line-height: 1.6;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            animation: fadeInUp 1.5s ease-out forwards;
+        }
+
+        .text-box p {
+            margin-bottom: 10px;
+        }
+
+        .phone-icon {
+            font-size: 2rem;
+            color: #ffc107;
+            margin-bottom: 10px;
+        }
+
+        .availability {
+            color: #ffc107;
+            font-size: 14px;
+        }
+
+        .image-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: zoomIn 2s ease-out forwards;
+        }
+
+        .image-box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transform: scale(0.8);
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+        }
+
+        .image-box img:hover {
+            transform: scale(1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInFromLeft {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInFromRight {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInText {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes growBar {
+            from {
+                width: 0;
+            }
+            to {
+                width: 120px;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes zoomIn {
+            from {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .left-section, .right-section {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Section Gauche -->
+        <div class="left-section">
+            <h1>RÉUSSIR SES COURS DE FRANÇAIS</h1>
+            <p>
+                <strong>Découvrez Nos Cours de Français Adaptés à Vos Besoins</strong>
+            </p>
+            <p>Vous souhaitez maîtriser la langue française pour vos études, votre carrière, ou simplement pour le plaisir de communiquer avec aisance ? Rejoignez nos cours de langue en français et transformez votre apprentissage en une expérience enrichissante !</p>
+            <p><strong>Pourquoi choisir nos cours ?</strong></p><br>
+            <ul>
+                <li><strong>Pour tous les niveaux :</strong> Que vous soyez débutant ou avancé, nous avons le programme qu’il vous faut.</li><br>
+                <li><strong>Méthode interactive :</strong> Apprenez grâce à des exercices pratiques, des jeux, et des discussions stimulantes.</li><br>
+                <li><strong>Professeurs qualifiés :</strong> Des experts passionnés et bienveillants pour vous guider à chaque étape.</li><br>
+                <li><strong>Flexibilité :</strong> Cours en ligne ou en présentiel, adaptés à votre emploi du temps.</li><br>
+                <li><strong>Résultats garantis :</strong> Progressez rapidement grâce à nos techniques d’apprentissage éprouvées.</li><br>
+            </ul>
+        </div>
+        <!-- Section Droite -->
+        <div class="right-section">
+            <div class="text-box">
+                <i class="phone-icon">&#9742;</i>
+                <p>Appeler au <strong>09 72 72 83 83</strong></p>
+                <p class="availability">Disponible jusqu'à 19h</p>
+            </div>
+            <div class="image-box">
+                <img src="image/france.jpg" alt="Drapeau français">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

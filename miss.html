@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css" integrity="sha384-NvKbDTEnL+A8F/AA5Tc5kmMLSJHUO868P+lDtTpJIeQdGYaUIuLr4lVGOEA1OcMy" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+    <link rel="stylesheet" href="https://use.fsontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap">
+    <link rel="stylesheet" href="file///C:/fontawasome-free-5.13.0-web/css/all.css">
+
+
+    <link rel="stylesheet" href="https:cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha 512-iecdlmask17CVkqkXNQ/ZH/XL1vWZOJyj7Yy7tcenmpD1ypASozpm/E0iptmFIB46ZmdtAc9eNBvH0H/Z"
+    crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+
+
+    <title>Nos Services</title>
+    <style>
+
+
+      /* Header */
+      header {
+    background: #0056b3;
+    color: yellow;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corps de la page */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color:#eff786;
+    color: #333;
+}
+
+/* Section des services */
+.services {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(6, 30, 247, 0.932);
+}
+
+/* Titre de la section */
+.services h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: blue;
+    margin-bottom: 30px;
+}
+
+/* Conteneur des cartes de services */
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* Style de chaque carte de service */
+.service-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgb(58, 8, 238);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Effet de hover sur la carte */
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Image du service */
+.service-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Informations sur le service */
+.service-info {
+    padding: 20px;
+}
+
+/* Titre du service */
+.service-info h2 {
+    font-size: 1.4rem;
+    color: blue;
+    margin-bottom: 10px;
+}
+
+/* Description du service */
+.service-info p {
+    font-size: 1rem;
+    color: #34495e;
+    line-height: 1.6;
+}
+
+/* Styles pour les écrans plus petits */
+@media (max-width: 768px) {
+    .services-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+ /*--Footer--*/
+ @import url('https://fonts.googleapis.com/css2?family=poppins:wght@300;400;500;600;700&display=swap');
+    body{
+      line-height: 1.5;
+      font-family: 'poppins', sans-serif;
+    }
+  .container{
+     max-width: 1170px;
+     margin: auto; 
+    }
+    .row{
+      display: flex;
+      flex-wrap: wrap;
+    }
+    ul{
+    list-style: none;
+    }
+  #footer{
+    background-color: #24262b;
+    padding: 25px 0;
+  }
+  .footer-col{
+   width: 25%;
+   padding: 0 15px;
+  }
+  .footer-col h4{
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+  }
+  .footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+  }
+  .footer-col ul li:not(:last-child){
+    margin-bottom: 10px ;
+  }
+  .footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffff;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  .footer-col ul li a:hover{
+    color: #ffffff;
+    padding-left: 8px;
+  }
+  .footer-col .social-links a{
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+      background-color: rgba(255, 255, 255, 0.2);
+      margin:0 10px 10px 0;
+      text-align: center;
+      line-height: 40px;
+      border-radius: 50%;
+      color: #ffff;
+      transition: all 0.5 ease;
+  }
+  .footer-col .social-links a:hover{
+    color: #24262b;
+    background-color: #ffff;
+  }
+  /*--Footer responsive--*/
+  @media(max-width:767px){
+    .footer-col{
+      width: 50%;
+      margin-bottom: 30px;
+    }
+  }
+  @media(max-width:574px){
+    .footer-col{
+      width: 100%;
+    }
+  }
+
+
+
+    </style>
+<body>
+
+    <header>
+        <div class="container">
+          <h1>Services d'actualité</h1>
+        </div>
+      </header>
+    <section class="services">
+
+        <div class="services-container">
+            <div class="service-card">
+                <img src="service1.jpg" alt="Service 1" class="service-img">
+                <div class="service-info">
+                    <h2>Formation Continue</h2>
+                    <p>Nos programmes de formation continue permettent à vos équipes d'élargir leurs compétences et de rester compétitives dans leur secteur.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <img src="service2.jpg" alt="Service 2" class="service-img">
+                <div class="service-info">
+                    <h2>Consultation Personnalisée</h2>
+                    <p>Nous vous offrons des conseils sur mesure pour améliorer les performances de votre organisation et atteindre vos objectifs stratégiques.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <img src="service3.jpg" alt="Service 3" class="service-img">
+                <div class="service-info">
+                    <h2>Support Technique</h2>
+                    <p>Notre équipe vous accompagne avec un support technique rapide et efficace, afin de garantir le bon fonctionnement de vos outils et systèmes.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <img src="service4.jpg" alt="Service 4" class="service-img">
+                <div class="service-info">
+                    <h2>Développement Web</h2>
+                    <p>Nos experts créent des solutions web innovantes et personnalisées pour vous aider à vous démarquer sur le marché numérique.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <img src="service4.jpg" alt="Service 4" class="service-img">
+                <div class="service-info">
+                    <h2>Développement Web</h2>
+                    <p>Nos experts créent des solutions web innovantes et personnalisées pour vous aider à vous démarquer sur le marché numérique.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <img src="service4.jpg" alt="Service 4" class="service-img">
+                <div class="service-info">
+                    <h2>Développement Web</h2>
+                    <p>Nos experts créent des solutions web innovantes et personnalisées pour vous aider à vous démarquer sur le marché numérique.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+    <!--footer-->
+
+    <section id="footer">
+        <footer class="footer">
+          <div class="container">
+              <div class="row">
+                  <div class="footer-col">
+                      <h4>Menu</h4>
+                      <ul>
+                        <li>  <a href="#header" class="dropbtn">About <span class="caret"></span></a></li>
+                       <li> <a href="">Services</a></li>
+                       <li> <a href="">Témoignages</a></li>
+                        <li><a href="">Contacts</a></li>
+                  
+                      </ul>
+                  </div>
+                  <div class="footer-col">
+                      <h4>Nos services</h4>
+                      <ul>
+                          <li><a href="bac.html">BAC étrangers</a></li>
+                          <li><a href="cours.html">Cours de langues</a></li>
+                          <li><a href="prepas.html">Préparation aux concours</a></li>
+                          <li><a href="soutien.html">Soutien scolaire à domicile</a></li>
+                          <li><a href="recru.html">Recrutement d'enseignants</a></li>
+                      </ul>
+                  </div>
+                  <div class="footer-col">
+                      <img src="images/Groupe la pensee.png" width="200" height="200">
+                  </div>
+                  <div class="footer-col">
+                      <h4>Follow us</h4>
+                      <div class="social-links">
+                          <a href="#"><i class="fab fa-facebook-f"></i></a>
+                          <a href="https://wa.me/qr/5YDVHA3AHLRTM1"><i class="fab fa-whatsapp"></i></a>
+                          <a href="#"><i class="fab fa-instagram"></i></a>
+                      </div>
+                  </div>
+              </div>
+          </div> 
+        </footer>
+      </section>
+        
+     
+
+</body>
+</html>

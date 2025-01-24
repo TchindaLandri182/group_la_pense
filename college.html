@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LYCEE / HIGH SCHOOL</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #003399;
+            background-color: #f8f8f8;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header styles */
+        .header {
+            background-color: #ffd700;
+            color: #003399;
+            text-align: center;
+            padding: 15px 20px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .header span {
+            font-size: 1rem;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        /* Container styles */
+        .container {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            filter: brightness(70%);
+        }
+
+        /* Button styles */
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            z-index: 1;
+        }
+
+        .button {
+            background-color: #fff;
+            color: #003399;
+            border: 2px solid #003399;
+            border-radius: 8px;
+            padding: 15px 25px;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+        }
+
+        .button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            background-color: #003399;
+            color: #fff;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .header {
+                text-align: center;
+            }
+
+            .button {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .button {
+                width: 250px;
+            }
+        }
+
+        /* Animation */
+        .container {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div>GROUPE LA PENSÉE</div>
+        <span>LYCEE / HIGH SCHOOL</span>
+    </div>
+
+    <div class="container">
+        <img class="image" src="image/lycée.jpg" alt="High school students"> <!-- Update this path -->
+        
+        <div class="buttons">
+            <div class="button">
+                <a href="first.html">1er cycle: 6ème à 3ème / from 1 to form 4</a>
+            </div>
+            <div class="button">
+                <a href="second.html">2nd cycle: Seconde à Terminale / from 5 to upper six</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

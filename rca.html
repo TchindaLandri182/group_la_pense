@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centre de Préparation La PENSÉE</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            position: relative;
+            height: 100vh;
+            background: url('image/RCA.jpg') no-repeat center center/cover;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+            animation: fadeInDown 1.5s;
+        }
+
+        header p {
+            font-size: 1.8rem;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+            animation: fadeInUp 1.5s;
+        }
+
+        .container {
+            padding: 40px 10%;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            color: #004080;
+            margin-bottom: 20px;
+            animation: fadeIn 1.5s;
+        }
+
+        .section p, .section ul {
+            animation: fadeIn 1.5s;
+        }
+
+        .section ul {
+            margin-left: 20px;
+            list-style-type: disc;
+        }
+
+        .section ul li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #004080;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            header p {
+                font-size: 1.2rem;
+            }
+
+            .section h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Bienvenue au Centre de Préparation au Diplôme Centrafricain La PENSÉE</h1>
+    <p>Votre passerelle vers la réussite académique !</p>
+</header>
+
+<div class="container">
+    <section class="section">
+        <h2>Pourquoi Choisir La PENSÉE ?</h2>
+        <ul>
+            <li><strong>Accompagnement Personnalisé :</strong> À La PENSÉE, chaque étudiant bénéficie d’un suivi individualisé. Nos méthodes d’enseignement sont conçues pour répondre à vos besoins spécifiques, vous permettant d’atteindre vos objectifs académiques.</li>
+            <li><strong>Environnement Stimulant :</strong> Nous offrons un cadre d’apprentissage motivant et accueillant, propice à l'épanouissement et à la réussite.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>Nos Méthodes : Une Préparation Efficace</h2>
+        <ul>
+            <li>Cours Intensifs : Sessions dynamiques pour approfondir vos compétences.</li>
+            <li>Contrôles Hebdomadaires : Évaluations régulières pour mesurer vos progrès.</li>
+            <li>Séminaires d'Information : Découvrez les opportunités offertes par les grandes écoles africaines et occidentales.</li>
+            <li>Suivi par un Conseiller Pédagogique : Un accompagnement personnalisé pour maximiser vos chances de succès.</li>
+            <li>Sessions d'Examen Trimestrielles : Préparez-vous dans des conditions réelles avec des examens simulés.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>Dossier d'Inscription : Ce que Vous Devez Savoir</h2>
+        <ul>
+            <li>Copie certifiée de l'acte de naissance</li>
+            <li>Certificat de nationalité</li>
+            <li>Fiche d'inscription (disponible à l'établissement)</li>
+            <li>Lettre de motivation adressée au Directeur</li>
+            <li>4 photos d'identité</li>
+            <li>Avoir 18 ans ou plus</li>
+        </ul>
+        <p>Les inscriptions se déroulent d'août à octobre, avec une rentrée scolaire fixée au 20 septembre. Les frais de dossier doivent être réglés au plus tard fin octobre, et la scolarité débute le premier octobre.</p>
+    </section>
+
+    <section class="section">
+        <h2>Avantages Exclusifs de La PENSÉE</h2>
+        <ul>
+            <li>Cours de Remise à Niveau Gratuits : Un soutien précieux pour ceux qui en ont besoin.</li>
+            <li>Mise en Relation avec les Grandes Écoles Africaines et Européennes : Ouvrez-vous à des perspectives passionnantes.</li>
+            <li>Possibilité de Déposer les Dossiers aux Examens Nationaux : Simplifiez vos démarches administratives.</li>
+        </ul>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2025 Centre de Préparation La PENSÉE. Tous droits réservés.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réussir ses cours de Russe</title>
+   <style>
+    /* Réinitialisation */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corps de la page */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9; /* Gris clair */
+    overflow-x: hidden;
+}
+
+/* Conteneur principal */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Section gauche */
+.left-section {
+    flex: 1 1 50%;
+    background-color: #2c3e50; /* Bleu-gris */
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: slideInFromLeft 1s ease-out;
+}
+
+.left-section h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ecf0f1; /* Blanc cassé */
+    margin-bottom: 20px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.left-section h1::after {
+    content: '';
+    display: block;
+    width: 120px;
+    height: 5px;
+    background-color: #f39c12; /* Jaune or */
+    margin-top: 10px;
+    animation: growBar 1s ease-out forwards;
+}
+
+.left-section p {
+    font-size: 1.2rem;
+    color: #ecf0f1;
+    margin-top: 20px;
+    line-height: 1.8;
+    animation: fadeInText 2s ease-out;
+}
+
+.left-section ul {
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+.left-section ul li {
+    font-size: 1.1rem;
+    color: #f39c12;
+    margin-bottom: 15px;
+    animation: fadeInText 2s ease-out;
+}
+
+/* Section droite */
+.right-section {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px;
+    animation: slideInFromRight 1s ease-out;
+}
+
+.text-box {
+    background-color: #f39c12; /* Jaune or */
+    padding: 20px;
+    border-radius: 8px;
+    color: #333;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-out forwards;
+}
+
+.text-box p {
+    margin: 10px 0;
+}
+
+.phone-icon {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.availability {
+    color: #2c3e50; /* Bleu-gris */
+    font-size: 1rem;
+}
+
+.image-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: zoomIn 2s ease-out forwards;
+}
+
+.image-box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transform: scale(0.8);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.image-box img:hover {
+    transform: scale(1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes growBar {
+    from {
+        width: 0;
+    }
+    to {
+        width: 120px;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-section, .right-section {
+        flex: 1 1 100%;
+    }
+}
+   </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Section Gauche -->
+        <div class="left-section">
+            <h1>RÉUSSIR SES COURS DE RUSSE</h1>
+            <p>
+            <strong>Découvrez Nos Cours de Russe Adaptés à Vos Besoins</strong>
+            </p>
+            <p>Vous rêvez de maîtriser la langue russe pour vos études, votre carrière, ou explorer une culture fascinante ? Rejoignez nos cours de russe et progressez rapidement grâce à une méthode motivante et adaptée à vos objectifs !</p>
+            <p><strong>Pourquoi choisir nos cours ?</strong></p><br>
+            <ul>
+                <li><strong>Pour tous les niveaux :</strong>Que vous soyez débutant ou avancé, nous avons un programme qui répond à vos attentes.</li><br>
+                <li><strong>Méthode interactive :</strong>Apprenez avec des exercices pratiques, des dialogues vivants, et des activités captivantes.</li><br>
+                <li><strong>Professeurs qualifiés </strong>Des enseignants expérimentés pour vous guider pas à pas dans l’apprentissage du russe.</li><br>
+                <li><strong>Flexibilité :</strong>Cours en ligne ou en présentiel, selon vos préférences et votre emploi du temps.</li><br>
+                <li><strong>Progrès garantis :</strong>Avancez rapidement grâce à nos techniques d’apprentissage personnalisées.</li><br>
+            </ul>
+        </div>
+        <!-- Section Droite -->
+        <div class="right-section">
+            <div class="text-box">
+                <p>
+                    <i class="phone-icon"></i>
+                    <p>Appeler au 09 72 72 83 83</p>
+                    <p class="availability">Disponible jusqu'à 19h</p>
+                </p>
+            </div>
+            <div class="image-box">
+                <img src="image/russe.jpg" alt="Image de la Russie">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

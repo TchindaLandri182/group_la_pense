@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cycle Licence</title>
+    <style>
+        /* Réinitialisation générale */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', sans-serif;
+            background-color: #e2e7ea;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 30px;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .left-section, .right-section {
+            flex: 1;
+            min-width: 320px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .left-section {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+        }
+
+        .left-section h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #f39c12;
+        }
+
+        .left-section p {
+            margin-bottom: 20px;
+        }
+
+        .left-section ul {
+            padding-left: 20px;
+            list-style-type: circle;
+        }
+
+        .right-section {
+            background-color: #3498db;
+            color: white;
+        }
+
+        .right-section p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .right-section ul {
+            padding-left: 20px;
+        }
+
+        .right-section ul li {
+            margin-bottom: 15px;
+            list-style-type: square;
+        }
+
+        .pricing ul {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        .pricing ul li {
+            margin-bottom: 15px;
+        }
+
+        /* Hover effect */
+        .left-section:hover, .right-section:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .left-section, .right-section {
+                padding: 20px;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .right-section img {
+            width: 100%;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Section gauche -->
+        <div class="left-section">
+            <h1>Cycle Licence</h1>
+            <p>Le soutien scolaire à domicile et en petit groupe pour le cycle licence est un service éducatif qui propose un accompagnement personnalisé aux étudiants dans leurs études supérieures.</p>
+            <p><strong>Nos Atouts :</strong></p>
+            <ul>
+                <li><strong>Accompagnement Personnalisé :</strong> Les cours sont adaptés aux besoins spécifiques de chaque étudiant.</li>
+                <li><strong>Flexibilité :</strong> Les sessions peuvent être organisées selon les disponibilités des étudiants.</li>
+                <li><strong>Renforcement de la Confiance :</strong> Aide régulière pour renforcer motivation et confiance.</li>
+                <li><strong>Interactions Sociales :</strong> Sessions en petit groupe favorisant les échanges entre pairs.</li>
+            </ul>
+            <p><strong>Nos Approches :</strong></p>
+            <ul>
+                <li><strong>Évaluation des Besoins :</strong> Un diagnostic initial pour identifier les forces et faiblesses.</li>
+                <li><strong>Planification des Cours :</strong> Sessions organisées selon les matières à travailler et les objectifs.</li>
+                <li><strong>Suivi Régulier :</strong> Évaluations périodiques pour ajuster les méthodes d’enseignement.</li>
+            </ul>
+
+            <p><strong>Différents Packs :</strong></p>
+            <ul>
+                <li><strong>Pack Domicile :</strong> Sessions à domicile pour un étudiant seul – <strong>40 000 FCFA / mois</strong></li>
+                <li><strong>Pack Petit Groupe :</strong> Séances en petit groupe (10-25 étudiants) – <strong>17 000 FCFA / semestre</strong></li>
+                <li><strong>Pack Préparation aux Examens :</strong> Révision intensive avant les examens – <strong>15 000 FCFA / deux semaines</strong></li>
+            </ul>
+
+        </div>
+
+        <!-- Section droite -->
+        <div class="right-section">
+            <p>Pour en savoir plus, contactez-nous dès aujourd'hui !</p>
+            <img src="image/licence.jpg" alt="Élève et enseignant">
+        </div>
+    </div>
+
+</body>
+</html>

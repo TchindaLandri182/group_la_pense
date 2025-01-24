@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOUTIEN SCOLAIRE</title>
+    <style>
+        /* Réinitialisation générale */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .left-section, .right-section {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: white;
+        }
+
+        .left-section {
+            background-color: #8061a8;
+            position: relative;
+            overflow: hidden;
+            animation: bounceIn 1.2s ease-out;
+        }
+
+        .left-section::before {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            left: -50px;
+            width: 120px;
+            height: 120px;
+            background-color: white;
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .left-section h1 {
+            color: #003366;
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+            z-index: 1;
+            position: relative;
+        }
+
+        .left-section h1::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: #ffd700;
+            margin-top: 10px;
+        }
+
+        .left-section p {
+            color: #000;
+            z-index: 1;
+            position: relative;
+        }
+
+        .right-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: all 0.8s ease-in-out;
+        }
+
+        .right-section.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .right-section p {
+            background-color: #e6a749;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            flex: 1;
+        }
+
+        .right-section img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        /* Animations */
+        @keyframes bounceIn {
+            0% {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            60% {
+                transform: scale(1.2);
+                opacity: 1;
+            }
+            80% {
+                transform: scale(0.95);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        .phone-icon {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .availability {
+            color: green;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="left-section">
+            <h1>SOUTIEN SCOLAIRE</h1>
+            <p>Le soutien scolaire à domicile pour le primaire est un service destiné aux élèves afin de renforcer leurs compétences dans un environnement confortable et familier. Ce programme vise à accompagner les enfants dans leur apprentissage, en leur apportant une aide personnalisée pour surmonter les difficultés rencontrées dans différentes matières scolaires.</p><br>
+
+            <p><strong>NOS ATOUTS</strong></p>
+            <ul>
+                <li>Approche personnalisée : Cours adaptés aux besoins spécifiques de chaque élève, ce qui favorise une meilleure compréhension des concepts.</li>
+                <li>Flexibilité : Horaires de cours ajustables selon la disponibilité des élèves et des familles.</li>
+                <li>Confiance en soi : Renforcement de l'estime de soi et de la motivation à apprendre.</li>
+                <li>Suivi régulier : Évaluation continue des progrès et ajustement des méthodes d'apprentissage.</li>
+            </ul><br>
+
+            <p><strong>NOS APPROCHES</strong></p>
+            <ul>
+                <li>Évaluation initiale : Diagnostic des connaissances de l'élève pour identifier ses forces et ses faiblesses.</li>
+                <li>Plan d'apprentissage personnalisé : Élaboration d’un programme spécifique en fonction des besoins identifiés.</li>
+                <li>Conseiller pédagogique : Chaque élève est suivi par un conseiller bien à la maison qu’à l’école.</li>
+                <li>Rétroaction constante : Communication régulière avec les parents pour les tenir informés des progrès.</li>
+            </ul>
+        </div>
+
+        <div class="right-section show"> 
+            <i class="phone-icon"></i>
+            <p>Appeler au 09 72 72 83 83</p>
+            <p class="availability">Disponible jusqu'à 19h</p>
+            <img src="image/ecriture.jpg" alt="Élève et enseignant">
+        </div>
+    </div>
+
+</body>
+</html>

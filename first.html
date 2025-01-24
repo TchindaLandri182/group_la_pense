@@ -1,0 +1,177 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collège</title>
+    <style>
+        /* Réinitialisation générale */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .left-section, .right-section {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: white;
+        }
+
+        .left-section {
+            background-color: #59dfac;
+            position: relative;
+            overflow: hidden;
+            animation: rotateZoom 1.5s ease-out;
+        }
+
+        .left-section::before {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            left: -50px;
+            width: 120px;
+            height: 120px;
+            background-color: white;
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .left-section h1 {
+            color: #003366;
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+            z-index: 1;
+            position: relative;
+        }
+
+        .left-section h1::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: #5ea2da;
+            margin-top: 10px;
+        }
+
+        .left-section p {
+            color: #000;
+            z-index: 1;
+            position: relative;
+        }
+
+        .right-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            animation: slideInRight 1.5s ease-out;
+        }
+
+        .right-section p {
+            background-color: #f2f535;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            flex: 1;
+        }
+
+        .right-section img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        /* Animations */
+        @keyframes rotateZoom {
+            from {
+                transform: scale(0.5) rotate(-180deg);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1) rotate(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        .phone-icon {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .availability {
+            color: rgb(6, 21, 231);
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Section gauche -->
+        <div class="left-section">
+            <h1>Collège</h1>
+            <p>Le soutien scolaire à domicile pour le collège est conçu pour accompagner les élèves dans leur parcours académique, en leur offrant une aide ciblée et personnalisée dans les matières étudiées. Ce service vise à renforcer les compétences des collégiens tout en favorisant leur autonomie et leur confiance en eux face aux défis scolaires.</p>
+            <br>
+            <p><strong style="color: blue;">NOS ATOUTS :</strong></p>
+            <ul>
+                <li style="color: yellow;"><strong style="color: blue;">Soutien personnalisé :</strong> Cours adaptés aux besoins spécifiques de chaque élève, permettant une meilleure assimilation des connaissances.</li>
+                <li style="color: yellow;"><strong style="color: blue;">Flexibilité horaire :</strong> Possibilité de choisir des horaires qui conviennent le mieux aux élèves et à leurs familles.</li>
+                <li style="color: yellow;"><strong style="color: blue;">Renforcement des compétences :</strong> Aide à la préparation des examens et des contrôles, ainsi qu'à la compréhension des matières difficiles.</li>
+                <li style="color: yellow;"><strong style="color: blue;">Suivi régulier :</strong> Évaluations fréquentes des progrès de l'élève et ajustement des méthodes d'enseignement.</li>
+            </ul>
+            <br>
+            <p><strong style="color: blue;">NOS APPROCHES :</strong></p>
+            <ul>
+                <li style="color: yellow;"><strong style="color: blue;">Évaluation diagnostique :</strong> Analyse des forces et faiblesses de l'élève pour établir un plan d'apprentissage adapté.</li>
+                <li style="color: yellow;"><strong style="color: blue;">Planification des cours :</strong> Élaboration d'un programme sur mesure, incluant des objectifs clairs et mesurables.</li>
+                <li style="color: yellow;"><strong style="color: blue;">Supports variés :</strong> Utilisation de manuels, ressources numériques, exercices pratiques et jeux éducatifs pour diversifier l'apprentissage.</li>
+                <li style="color: yellow;"><strong style="color: blue;">Communication avec les parents :</strong> Informations régulières sur les progrès et les stratégies à mettre en place à la maison.</li>
+            </ul>
+        </div>
+
+        <!-- Section droite -->
+        <div class="right-section">
+            <i class="phone-icon"></i>
+            <p>Appeler au 09 72 72 83 83 <br>Disponible jusqu'à 19h</p>
+            
+            <img src="image/1ercycle.jpg" alt="Élève et enseignant">
+        </div>
+    </div>
+
+</body>
+</html>

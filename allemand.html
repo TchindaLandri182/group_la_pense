@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réussir ses cours d'Allemand</title>
+    <style>
+    /* Réinitialisation */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Corps de la page */
+    body {
+        font-family: 'Helvetica', Arial, sans-serif;
+        background-color: #f7f7f7; /* Gris clair */
+        color: #333;
+        overflow-x: hidden;
+    }
+
+    /* Conteneur principal */
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 60px 40px;
+        gap: 30px;
+    }
+
+    /* Section gauche */
+    .left-section {
+        flex: 1 1 45%;
+        background-color: #ffffff; /* Blanc pour le fond */
+        padding: 30px;
+        border: 1px solid #d1d1d1; /* Gris clair pour les bordures */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        border-radius: 8px;
+        animation: fadeIn 1s ease-out;
+    }
+
+    .left-section h1 {
+        font-size: 2.2rem;
+        font-weight: 600;
+        color: #4a90e2; /* Bleu pastel */
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+    .left-section h1::after {
+        content: '';
+        display: block;
+        width: 80px;
+        height: 4px;
+        background-color: #3e8e41; /* Vert menthe */
+        margin-top: 10px;
+        animation: growBar 1s ease-out forwards;
+    }
+
+    .left-section p {
+        font-size: 1.1rem;
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .left-section ul {
+        list-style-type: none;
+        margin-top: 20px;
+        padding-left: 20px;
+    }
+
+    .left-section ul li {
+        font-size: 1rem;
+        color: #555;
+        margin-bottom: 15px;
+    }
+
+    /* Section droite */
+    .right-section {
+        flex: 1 1 45%;
+        background-color: #e3f2f7; /* Bleu clair */
+        padding: 30px;
+        border: 1px solid #d1d1d1;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        animation: fadeInRight 1s ease-out;
+    }
+
+    .text-box {
+        background-color: #a3e1d8; /* Vert menthe */
+        padding: 20px;
+        border-radius: 8px;
+        color: #fff;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .phone-icon {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+
+    .availability {
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    /* Animation du drapeau qui sort */
+    .image-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(50%);
+        animation: flagAnimation 2s ease-out forwards;
+    }
+
+    .image-box img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .image-box img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeInRight {
+        from {
+            opacity: 0;
+            transform: translateX(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes growBar {
+        from {
+            width: 0;
+        }
+        to {
+            width: 80px;
+        }
+    }
+
+    @keyframes flagAnimation {
+        from {
+            opacity: 0;
+            transform: translateX(100%);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .left-section, .right-section {
+            flex: 1 1 100%;
+            margin-bottom: 30px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Section Gauche -->
+        <div class="left-section">
+            <h1>RÉUSSIR SES COURS D'ALLEMAND</h1>
+            <p><strong>Découvrez Nos Cours d'Allemand Adaptés à Vos Besoins</strong></p>
+            <p>Vous souhaitez maîtriser l’allemand pour vos études, votre carrière, ou voyager en toute sérénité ? Rejoignez nos cours d’allemand et progressez rapidement grâce à une méthode moderne, interactive et motivante !</p>
+            <p><strong>Pourquoi choisir nos cours ?</strong></p>
+            <ul>
+                <li><strong>Pour tous les niveaux :</strong> Nos cours s’adaptent à vos besoins.</li>
+                <li><strong>Méthode interactive :</strong> Apprenez en pratiquant et en discutant.</li>
+                <li><strong>Professeurs qualifiés :</strong> Des enseignants passionnés et expérimentés.</li>
+                <li><strong>Flexibilité :</strong> Cours en ligne ou en présentiel selon vos préférences.</li>
+                <li><strong>Résultats rapides :</strong> Progrès garantis grâce à nos méthodes efficaces.</li>
+            </ul>
+        </div>
+
+        <!-- Section Droite -->
+        <div class="right-section">
+            <div class="text-box">
+                <p>
+                    <i class="phone-icon">📞</i>
+                    <p>Appeler au 09 72 72 83 83</p>
+                    <p class="availability">Disponible jusqu'à 19h</p>
+                </p>
+            </div>
+            <div class="image-box">
+                <img src="image/allemangne.jpg" alt="Drapeau Allemand">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

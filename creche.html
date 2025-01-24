@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SA CRECHE A DOMICILE</title>
+    <style>
+        /* Réinitialisation générale */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .left-section, .right-section {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            animation: zoomIn 1s ease-in-out;
+        }
+
+        .left-section {
+            background-color: #749fc5;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .left-section::before {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            left: -50px;
+            width: 120px;
+            height: 120px;
+            background-color: white;
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .left-section h1 {
+            color: #003366;
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+            z-index: 1;
+            position: relative;
+        }
+
+        .left-section h1::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: #ffd700;
+            margin-top: 10px;
+        }
+
+        .left-section p {
+            color: #000;
+            z-index: 1;
+            position: relative;
+        }
+
+        .left-section ul {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        .left-section ul li {
+            list-style-type: square;
+            margin-bottom: 10px;
+        }
+
+        .right-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .right-section p {
+            background-color: #8da5a5;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            flex: 1;
+        }
+
+        .right-section img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        /* Animations */
+        @keyframes zoomIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .phone-icon {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .availability {
+            color: green;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Section gauche -->
+        <div class="left-section">
+            <h1>CRÈCHE À DOMICILE</h1>
+            <p>
+                La crèche à domicile est un service de garde d'enfants qui permet aux parents de confier leurs petits à une assistante maternelle agréée dans le confort de leur propre maison ou dans celle de l'assistante. Ce mode de garde s’adapte aux besoins des familles et offre une approche individualisée pour le développement des enfants.
+            </p>
+
+            <p><strong>Nos Atouts :</strong></p>
+            <ul>
+                <li><strong>Environnement Familier :</strong> Les enfants sont gardés dans un cadre qu'ils connaissent, ce qui peut réduire l'anxiété liée à la séparation.</li>
+                <li><strong>Attention Personnalisée :</strong> Grâce à un ratio faible d'enfants par adulte, chaque enfant reçoit une attention individuelle.</li>
+                <li><strong>Flexibilité :</strong> Les horaires peuvent être adaptés selon les besoins des parents, ce qui est pratique pour ceux ayant des horaires de travail irréguliers.</li>
+                <li><strong>Socialisation :</strong> Les enfants ont l’opportunité d'interagir avec d'autres enfants, favorisant ainsi leur développement social.</li>
+            </ul>
+
+            <p><strong>Notre Approche :</strong></p>
+            <ul>
+                <li><strong>Observation et Évaluation :</strong> L’assistante maternelle évalue les besoins et les intérêts de chaque enfant pour adapter les activités.</li>
+                <li><strong>Activités Éducatives et Ludiques :</strong> Des jeux et des activités sont organisés pour stimuler l'apprentissage tout en s'amusant.</li>
+                <li><strong>Communication avec les Parents :</strong> Un échange constant entre l’assistante maternelle et les parents est essentiel pour suivre le développement de l'enfant.</li>
+            </ul>
+
+            <p>Pour plus d'infos, contactez-nous et offrons à votre enfant un cadre propice à son épanouissement !</p>
+        </div>
+
+        <!-- Section droite -->
+        <div class="right-section">
+            <i class="phone-icon"></i>
+            <p>Appeler au 09 72 72 83 83</p>
+            <p class="availability">Disponible jusqu'à 19h</p>
+            <img src="image/creche.jpg" alt="Crèche à domicile">
+        </div>
+    </div>
+
+</body>
+</html>

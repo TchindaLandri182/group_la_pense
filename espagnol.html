@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réussir ses cours de Espagnol</title>
+    <style>
+    /* Réinitialisation */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Corps de la page */
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f7fa;
+        color: #333;
+        overflow-x: hidden;
+    }
+
+    /* Conteneur principal */
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 40px;
+    }
+
+    /* Section gauche */
+    .left-section {
+        flex: 1 1 48%;
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        animation: fadeInLeft 1s ease-out;
+    }
+
+    .left-section h1 {
+        font-size: 2.4rem;
+        font-weight: 700;
+        color: #0d47a1; /* Bleu foncé */
+        margin-bottom: 15px;
+        position: relative;
+    }
+
+    .left-section h1::after {
+        content: '';
+        display: block;
+        width: 80px;
+        height: 4px;
+        background-color: #ffb300; /* Or */
+        margin-top: 10px;
+        animation: growBar 1s ease-out forwards;
+    }
+
+    .left-section p {
+        font-size: 1.1rem;
+        color: #555;
+        margin-top: 20px;
+        line-height: 1.6;
+    }
+
+    .left-section ul {
+        list-style-type: none;
+        margin-top: 20px;
+    }
+
+    .left-section ul li {
+        font-size: 1rem;
+        color: #666;
+        margin-bottom: 10px;
+    }
+
+    /* Section droite */
+    .right-section {
+        flex: 1 1 48%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 30px;
+        background-color: #0d47a1; /* Bleu foncé */
+        color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        animation: fadeInRight 1s ease-out;
+    }
+
+    .text-box {
+        background-color: #ffb300; /* Or */
+        padding: 20px;
+        border-radius: 8px;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: #0d47a1; /* Bleu foncé */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .phone-icon {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+
+    .availability {
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .image-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: zoomIn 2s ease-out forwards;
+    }
+
+    .image-box img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        transform: scale(0.8);
+        transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+
+    .image-box img:hover {
+        transform: scale(1);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Animations */
+    @keyframes fadeInLeft {
+        from {
+            opacity: 0;
+            transform: translateX(-50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes fadeInRight {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes growBar {
+        from {
+            width: 0;
+        }
+        to {
+            width: 80px;
+        }
+    }
+
+    @keyframes zoomIn {
+        from {
+            opacity: 0;
+            transform: scale(0.5);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .left-section, .right-section {
+            flex: 1 1 100%;
+            margin-bottom: 30px;
+        }
+    }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Section Gauche -->
+        <div class="left-section">
+            <h1>RÉUSSIR SES COURS D'ESPAGNOL</h1>
+            <p><strong>Découvrez Nos Cours d’Espagnol Adaptés à Vos Besoins</strong></p>
+            <p>Vous souhaitez apprendre l’espagnol pour voyager, évoluer professionnellement ou découvrir une langue riche et vibrante ? Rejoignez nos cours d’espagnol et maîtrisez rapidement cette langue grâce à une méthode interactive et motivante !</p>
+            <p><strong>Pourquoi choisir nos cours ?</strong></p><br>
+            <ul>
+                <li><strong>Pour tous les niveaux :</strong> Que vous soyez débutant ou avancé, nos programmes s’adaptent à votre rythme.</li><br>
+                <li><strong>Méthode interactive :</strong> Apprenez avec des dialogues, des mises en situation, et des activités ludiques.</li><br>
+                <li><strong>Professeurs qualifiés :</strong> Des enseignants passionnés, experts en espagnol, pour vous guider à chaque étape.</li><br>
+                <li><strong>Flexibilité :</strong> Suivez des cours en ligne ou en présentiel selon votre emploi du temps.</li><br>
+                <li><strong>Résultats garantis :</strong> Progressez rapidement grâce à des techniques d’apprentissage éprouvées.</li><br>
+            </ul>
+        </div>
+        <!-- Section Droite -->
+        <div class="right-section">
+            <div class="text-box">
+                <p>
+                    <i class="phone-icon">📞</i>
+                    <p>Appeler au 09 72 72 83 83</p>
+                    <p class="availability">Disponible jusqu'à 19h</p>
+                </p>
+            </div>
+            <div class="image-box">
+                <img src="image/espagne.jpg" alt="Drapeau espagnol">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

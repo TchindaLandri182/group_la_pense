@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Language Courses</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            background-color: #ffd700;
+            color: #003399;
+            text-align: center;
+            padding: 20px;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            background-image: url('image/langues.jpg'); /* Add the image file path */
+            background-size: cover;
+            background-position: center;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .course-box {
+            background-color: white;
+            color: black;
+            border-radius: 8px;
+            padding: 10px 20px;
+            margin: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .course-box a {
+            text-decoration: none;
+            color: inherit; /* Inherit the button color */
+        }
+
+        .course-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .course-box:hover a {
+            color: #003399; /* Change the text color on hover */
+        }
+
+        @media (max-width: 768px) {
+            .course-box {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .course-box {
+                width: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">COURS DE LANGUES</div>
+
+    <div class="container">
+        <div class="course-box"> 
+            <a href="français.html" rel="noopener noreferrer">Cours de français</a> 
+        </div>
+        <div class="course-box">
+            <a href="anglais.html" rel="noopener noreferrer">Cours d'anglais</a> 
+        </div>
+        <div class="course-box"> 
+            <a href="chinois.html" rel="noopener noreferrer">Cours de chinois</a>
+        </div>
+        <div class="course-box">
+            <a href="russe.html" rel="noopener noreferrer">Cours de russe</a>
+        </div>
+        <div class="course-box">
+            <a href="allemand.html" rel="noopener noreferrer">Cours d'allemand</a>
+        </div>
+        <div class="course-box">
+            <a href="espagnol.html"  rel="noopener noreferrer">Cours d'espagnol</a>
+        </div>
+    </div>
+
+</body>
+</html>
