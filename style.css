@@ -117,26 +117,29 @@ header {
     display: block;
 }
 
-/* Hamburger menu (for mobile view) */
-.hamburger {
-    display: none;
-    cursor: pointer;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 25px;
-    z-index: 999;
+#menu-btn{
+  font-size: 2.5rem;
+  border-radius: .5rem;
+  background: #eee;
+  color: #0066cc;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  display: none;
 }
 
-.hamburger .bar {
-    width: 100%;
-    height: 4px;
-    background-color: white;
-    border-radius: 2px;
-}
+.navbar .menu.active {
+      transform: scale(1);
+      opacity: 1;
+      transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+      display: block; /* Affiche le menu lorsque la classe 'active' est ajoutée */
+    }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+    #menu-btn{
+      display: initial;
+    }
+
     .logo {
         margin-right: auto;
     }
@@ -148,11 +151,22 @@ header {
         width: 100%;
     }
 
-    .menu {
-        flex-direction: column;
-        width: 100%;
-        padding: 10px 0;
-        background-color: #004d99;
+    .navbar .menu {
+      position: absolute;
+      top: 115%;
+      right: 2rem;
+      border-radius: 0.5rem;
+      box-shadow: 0.5rem 0.5rem 0 rgba(22, 160, 133, .2);
+      width: 30rem;
+      border: #0066cc;
+      background: white; /* Fond du menu */
+      transform: scale(0);
+      opacity: 0;
+      transform-origin: top right;
+      transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+      display: flex;
+      flex-direction: column; /* Disposition en colonne */
+      color: black; /* Couleur du texte */
     }
 
     .menu > li {
@@ -177,10 +191,6 @@ header {
 
     .submenu li a {
         padding: 10px 30px;
-    }
-
-    .hamburger {
-        display: block;
     }
 
     .navbar.active {
