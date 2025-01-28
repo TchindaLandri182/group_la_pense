@@ -45,77 +45,90 @@ a {
 }
 
 header {
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 30px;
-    position: relative;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  
 }
 
 .logo img {
-    width: 100px;  /* Taille du logo */
+  width: 100px;  /* Taille du logo */
 }
 
 .navbar {
-    flex-grow: 1;
-    display: flex;
-    justify-content: flex-end;
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .menu {
-    display: flex;
-    list-style-type: none;
-    gap: 30px;
+  display: flex;
+  list-style-type: none;
+  gap: 30px;
 }
 
 .menu > li {
-    position: relative;
+  position: relative;
 }
 
 .menu > li > a {
-    color: white;
-    padding: 12px 18px;
-    display: block;
-    font-size: 16px;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
+  color: white;
+  padding: 12px 18px;
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
 }
 
 .menu > li > a:hover {
-    background-color: #0066cc;
-    border-radius: 5px;
+  background-color: #0066cc;
+  border-radius: 5px;
 }
 
 /* Submenu Styles */
 .submenu {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: none;
-    position: absolute;
-    background-color: #333;
-    top: 100%;
-    left: 0;
-    width: 200px;
-    border-radius: 5px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  position: absolute;
+  background-color: #333;
+  top: 100%;
+  left: 0;
+  width: 200px;
+  border-radius: 5px;
+  z-index: 999;
 }
 
 .submenu li a {
-    padding: 12px 18px;
-    color: white;
-    display: block;
-    font-size: 14px;
-    font-weight: normal;
+  padding: 12px 18px;
+  color: white;
+  display: block;
+  font-size: 14px;
+  font-weight: normal;
 }
 
 .submenu li a:hover {
-    background-color: #0066cc;
+  background-color: #0066cc;
 }
 
 .menu > li:hover .submenu {
-    display: block;
+  display: block;
 }
+
+/* menu hamburger */
 
 #menu-btn{
   font-size: 2.5rem;
@@ -126,85 +139,90 @@ header {
   cursor: pointer;
   display: none;
 }
-
-.navbar .menu.active {
-      transform: scale(1);
-      opacity: 1;
-      transition: transform 0.3s ease-out, opacity 0.3s ease-out;
-      display: block; /* Affiche le menu lorsque la classe 'active' est ajoutée */
-    }
-
 /* Responsive Styles */
 @media (max-width: 768px) {
-    #menu-btn{
-      display: initial;
-    }
+  #menu-btn{
+    display: initial;
+  }
+  
+  .navbar .menu.active {
+    transform: scale(1);
+    opacity: 1;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    display: block; /* Affiche le menu lorsque la classe 'active' est ajoutée */
+  }
+  
+  .navbar .menu {
+    position: absolute;
+    top: 115%;
+    right: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0.5rem 0.5rem 0 rgba(22, 160, 133, .2);
+    width: 25rem;
+    border: #0066cc;
+    background: white; /* Fond du menu */
+    transform: scale(0);
+    opacity: 0;
+    transform-origin: top right;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    display: flex;
+    flex-direction: column; /* Disposition en colonne */
+    color: black; /* Couleur du texte */
+  }
+  
+  .navbar .menu.active {
+    transform: scale(1);
+    opacity: 1;
+  }
+  
+  .menu > li {
+    position: relative;
+    width: 100%; /* S'assure que chaque élément occupe toute la largeur */
+  }
+  
+  
+  .navbar .menu a {
+    font-size: 2rem;
+    display: block;
+    padding: 1rem;
+    color: #333; /* Couleur du texte */
+    text-decoration: none; /* Retirer le souligné */
+  }
+  .navbar .menu a:hover {
+    background-color: #0066cc; /* Couleur de fond au survol */
+    color: white; /* Couleur du texte au survol */
+  }
 
-    .logo {
-        margin-right: auto;
-    }
 
-    .navbar {
-        display: none; /* Hide navbar on mobile */
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-    }
-
-    .navbar .menu {
-      position: absolute;
-      top: 115%;
-      right: 2rem;
-      border-radius: 0.5rem;
-      box-shadow: 0.5rem 0.5rem 0 rgba(22, 160, 133, .2);
-      width: 30rem;
-      border: #0066cc;
-      background: white; /* Fond du menu */
-      transform: scale(0);
-      opacity: 0;
-      transform-origin: top right;
-      transition: transform 0.3s ease-out, opacity 0.3s ease-out;
-      display: flex;
-      flex-direction: column; /* Disposition en colonne */
-      color: black; /* Couleur du texte */
-    }
-
-    .menu > li {
-        width: 100%;
-    }
-
-    .menu > li > a {
-        padding: 10px 30px;
-        border-top: 1px solid #ccc;
-    }
-
-    .menu > li > a:hover {
-        background-color: #0066cc;
-    }
-
-    .submenu {
-        position: relative;
-        display: block;
-        width: 100%;
-        background-color: #333;
-    }
-
-    .submenu li a {
-        padding: 10px 30px;
-    }
-
-    .navbar.active {
-        display: flex;
-    }
-
-    .menu > li > a::after {
-        content: '\25BC'; /* down arrow */
-        margin-left: 10px;
-    }
-
-    .menu > li > a.active::after {
-        content: '\25B2'; /* up arrow */
-    }
+  .submenu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    position: absolute;
+    background-color: #777171; /* Fond sombre */
+    top: 100%;
+    left: 0;
+    width: 300px;
+    border-radius: 5px;
+  }
+  
+  .submenu li a {
+    padding: 12px 18px;
+    color: white;
+    display: block;
+    font-size: 10px;
+    font-weight: normal;
+  }
+  
+  .submenu li a:hover {
+    background-color: #0066cc;
+  }
+  
+  .menu > li:hover .submenu {
+    display: block; /* Affiche le sous-menu lorsqu'un item est survolé */
+  }
+  
 }
 
 /* Transitions for smooth dropdown */
