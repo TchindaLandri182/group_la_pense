@@ -158,7 +158,9 @@ header {
     right: 2rem;
     border-radius: 0.5rem;
     box-shadow: 0.5rem 0.5rem 0 rgba(22, 160, 133, .2);
-    width: 25rem;
+    width: 80%;
+    min-width: 12rem;
+    max-width: 25rem;
     border: #0066cc;
     background: white; /* Fond du menu */
     transform: scale(0);
@@ -546,7 +548,7 @@ header {
   }
   .info-wrap{
     width: 35%;
-    height: 573px;
+    height: 580px;
     padding: 40px;
     float: left;
     display: block;
