@@ -31,6 +31,13 @@ margin-bottom: 30px;
   margin-bottom: 40px;
 
 }
+.qoute{
+    display: block;
+    width: 2rem;
+  }
+  .qoute.right{
+    margin-left: auto;
+  }
 .times-icon, .times .menu-icon{
   display: none
 }
@@ -156,7 +163,7 @@ header {
     transition: transform 0.3s ease-out, opacity 0.3s ease-out;
     display: block; /* Affiche le menu lorsque la classe 'active' est ajoutée */
   }
-  
+
   .navbar .menu {
     position: absolute;
     top: 115%;
