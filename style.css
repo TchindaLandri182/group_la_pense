@@ -577,11 +577,16 @@ header {
     font-size: 18px;
     color: #fff;
   }
-  .info-details li i{
+  .info-details li .box-icon{
     background: #F44770;
     padding: 12px;
     border-radius: 50%;
     margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
   }
   .info-details li a{
     color: #fff;
@@ -593,10 +598,16 @@ header {
   .social-icons{
     list-style: none;
     text-align: center;
-    margin: 20px 0px;
+    margin: 20px auto;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
   }
   .social-icons li{
     display: inline-block;
+  }
+  .social-icons .new-icon{
+    width: 2rem;
   }
   .social-icons li i{
     background: #F44770;
@@ -770,21 +781,26 @@ header {
     color: #ffffff;
     padding-left: 8px;
   }
+  .footer-col .social-links {
+    display: flex;
+    gap: 0.3rem;
+    align-content: center;
+  }
   .footer-col .social-links a{
-      display: inline-block;
+      display: flex;
       height: 40px;
       width: 40px;
+      justify-content: center;
+      align-items: center;
       background-color: rgba(255, 255, 255, 0.2);
       margin:0 10px 10px 0;
-      text-align: center;
       line-height: 40px;
       border-radius: 50%;
       color: #ffff;
       transition: all 0.5 ease;
   }
   .footer-col .social-links a:hover{
-    color: #24262b;
-    background-color: #ffff;
+    translate: scale(1.05);
   }
   /*--Footer responsive--*/
   @media(max-width:767px){
@@ -829,6 +845,11 @@ header {
 
 .floating-button:hover {
     transform: scale(1.1);
+}
+
+.new-icon{
+  width: 1.3em;
+  
 }
 
 .whatsapp {

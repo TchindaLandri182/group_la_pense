@@ -195,21 +195,29 @@ body {
     color: #ffffff;
     padding-left: 8px;
   }
+  .new-icon{
+    width: 1.3em;
+  }
+  .footer-col .social-links {
+    display: flex;
+    gap: 0.3rem;
+    align-content: center;
+  }
   .footer-col .social-links a{
-      display: inline-block;
+      display: flex;
       height: 40px;
       width: 40px;
+      justify-content: center;
+      align-items: center;
       background-color: rgba(255, 255, 255, 0.2);
       margin:0 10px 10px 0;
-      text-align: center;
       line-height: 40px;
       border-radius: 50%;
       color: #ffff;
       transition: all 0.5 ease;
   }
   .footer-col .social-links a:hover{
-    color: #24262b;
-    background-color: #ffff;
+    translate: scale(1.05);
   }
   /*--Footer responsive--*/
   @media(max-width:767px){
@@ -309,9 +317,9 @@ body {
                   <div class="footer-col">
                       <h4>Follow us</h4>
                       <div class="social-links">
-                          <a href="#"><i class="fab fa-facebook-f"></i></a>
-                          <a href="https://wa.me/qr/5YDVHA3AHLRTM1"><i class="fab fa-whatsapp"></i></a>
-                          <a href="#"><i class="fab fa-instagram"></i></a>
+                          <a href="#"><img src="./icons/facebook-f-brands.svg" class="new-icon" /></a>
+                          <a href="https://wa.me/qr/5YDVHA3AHLRTM1"><img src="./icons/whatsapp-brands.svg" class="new-icon" /></a>
+                          <a href="#"><img src="./icons/instagram-brands.svg" class="new-icon" /></a>
                       </div>
                   </div>
               </div>
