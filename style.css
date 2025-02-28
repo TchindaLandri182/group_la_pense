@@ -31,7 +31,12 @@ margin-bottom: 30px;
   margin-bottom: 40px;
 
 }
-
+.times-icon, .times .menu-icon{
+  display: none
+}
+.times .times-icon, .menu-icon{
+  display: flex
+}
 
 #shado {
     font-family: 'Arial', sans-serif;
@@ -135,7 +140,7 @@ header {
   border-radius: .5rem;
   background: #eee;
   color: #0066cc;
-  padding: 1rem 1.5rem;
+  padding: 0.5rem 0.7rem;
   cursor: pointer;
   display: none;
 }
